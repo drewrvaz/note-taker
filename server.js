@@ -12,26 +12,12 @@ app.use(express.urlencoded({ extended: true}));
 app.use(express.json());
 
 // Creates a route for every file in the public folder
-app.use(express.static("public"));
+// app.use(express.static("public"));
+app.use('/', express.static(path.join(__dirname, '/public')));
 
-// Routes to the route files
-app.require('./routes/api');
-app.require('./routes.html');
-
-// GET route for notes page
-// app.get('/notes', (req, res) => {
-//   res.sendFile(path.join(__dirname, 'public/notes.html'))
-// })
-
-// GET route for homepage
-// app.get('*', (req, res) => {
-//   res.sendFile(path.join(__dirname, 'public/index.html'))
-// });
-
-// GET route for saved notes
-// app.get('/api/notes', (req, res) => {
-//   res.send
-// })
+// Routes
+app.use('/api', require('./routes/api'));
+app.use('/html', require('./routes/html'));
 
 // app listener - starts the server
 app.listen(PORT, () =>

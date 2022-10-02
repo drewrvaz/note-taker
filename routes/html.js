@@ -1,14 +1,17 @@
 // Dependencies necessary
+const express = require('express');
+const router = express.Router();
 const path = require("path");
 
+
 // GET Route for homepage
-app.get('*', (req, res) => {
+router.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../public/index.html'))
 });
 
 // GET route for notes
-app.get("/notes", (req, res) => {
-  res.sendFile(path.join(__dirname, "../public/notes.html"))
+router.get('/notes', (req, res) => {
+  res.sendFile(path.join(__dirname, '../public/notes.html'))
 });
 
-module.exports = app;
+module.exports = router;
