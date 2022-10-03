@@ -3,12 +3,12 @@ const notes = require('express').Router();
 const {v4 : uuidv4} = require("uuid")
 const { readAndAppend, readFromFile } = require('../helpers/fsUtils');
 
-fb.get('/', (req, res) =>
+notes.get('/', (req, res) =>
   readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)))
 );
 
 // POST Route for submitting feedback
-fb.post('/', (req, res) => {
+notes.post('/', (req, res) => {
   // Destructuring assignment for the items in req.body
   const { title, note } = req.body;
 
