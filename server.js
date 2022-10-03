@@ -16,8 +16,7 @@ app.use(express.urlencoded({ extended: true}));
 app.use(express.json());
 
 // Creates a route for every file in the public folder
-// app.use(express.static("public"));
-app.use('/', express.static(path.join(__dirname, '/public')));
+app.use(express.static("public"));
 
 // GET Route for homepage
 app.get('*', (req, res) => {
