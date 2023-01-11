@@ -14,6 +14,7 @@ This applicaiton is meant to be a note taker that saves notes that the user crea
 Link to project: https://murmuring-crag-49628.herokuapp.com/
 
 ![murmuring-crag-49628 herokuapp com_](https://user-images.githubusercontent.com/108427880/211888310-29550870-8d77-45d0-a9eb-43e4e611b711.png)
+![murmuring-crag-49628 herokuapp com_notes](https://user-images.githubusercontent.com/108427880/211888419-acc6d9ab-7aa6-451e-b9f1-1ed583d62315.png)
 
 ## Installation
 Clone the git repository. Make sure that you have node downloaded and install all of the proper packages using the npm i command.
